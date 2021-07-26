@@ -79,8 +79,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text('Developed By: Riyad Al-Ali & Ahmad Sabbagh',
-                        style: TextStyle(fontWeight: FontWeight.bold))
+                    // Text('Developed By: Riyad Al-Ali & Ahmad Sabbagh',
+                    //     style: TextStyle(fontWeight: FontWeight.bold))
                   ],
                 ),
               ),

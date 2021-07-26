@@ -53,6 +53,8 @@ class _CalculateScreenState extends State<CalculateScreen> {
   ];
 
   final _dataController = TextEditingController();
+  String? number;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,7 +176,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.1,
           ),
-          Text('Results is: $result')
+          Text('Results is: $number')
         ],
       ),
     );
@@ -184,13 +186,12 @@ class _CalculateScreenState extends State<CalculateScreen> {
   void calculateResults() {
     if (selectedOption == 'valve 20') {
       setState(() {
-        result = ((((originalVolumeValve20 - int.parse(dropDownMenuValue)) *
+        result = ((((originalVolumeValve20 + int.parse(dropDownMenuValue)) *
                         constantValve20) /
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
-        result = result *
-            -1; // i added this to correct the negative result that required to be
+        number = result.toStringAsFixed(2);
       });
 
       print("result is:$result");
@@ -198,13 +199,12 @@ class _CalculateScreenState extends State<CalculateScreen> {
     //-> valve 23
     if (selectedOption == 'valve 23') {
       setState(() {
-        result = ((((originalVolumeValve23 - int.parse(dropDownMenuValue)) *
+        result = ((((originalVolumeValve23 + int.parse(dropDownMenuValue)) *
                         constantValve23) /
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
-        result = result *
-            -1; // i added this to correct the negative result that required to be
+        number = result.toStringAsFixed(2);
       });
 
       print("result is:$result");
@@ -212,13 +212,12 @@ class _CalculateScreenState extends State<CalculateScreen> {
     //-> valve 26
     if (selectedOption == 'valve 26') {
       setState(() {
-        result = ((((originalVolumeValve26 - int.parse(dropDownMenuValue)) *
+        result = ((((originalVolumeValve26 + int.parse(dropDownMenuValue)) *
                         constantValve26) /
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
-        result = result *
-            -1; // i added this to correct the negative result that required to be
+        number = result.toStringAsFixed(2);
       });
 
       print("result is:$result");
@@ -226,13 +225,12 @@ class _CalculateScreenState extends State<CalculateScreen> {
     //-> valve 29
     if (selectedOption == 'valve 29') {
       setState(() {
-        result = ((((originalVolumeValve29 - int.parse(dropDownMenuValue)) *
+        result = ((((originalVolumeValve29 + int.parse(dropDownMenuValue)) *
                         constantValve29) /
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
-        result = result *
-            -1; // i added this to correct the negative result that required to be
+        number = result.toStringAsFixed(2);
       });
 
       print("result is:$result");
