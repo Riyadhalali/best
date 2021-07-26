@@ -189,6 +189,8 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
+        result = result *
+            -1; // i added this to correct the negative result that required to be
       });
 
       print("result is:$result");
@@ -201,6 +203,8 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
+        result = result *
+            -1; // i added this to correct the negative result that required to be
       });
 
       print("result is:$result");
@@ -213,6 +217,8 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
+        result = result *
+            -1; // i added this to correct the negative result that required to be
       });
 
       print("result is:$result");
@@ -225,6 +231,8 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     int.parse(_dataController.text)) *
                 100.0) -
             100.0;
+        result = result *
+            -1; // i added this to correct the negative result that required to be
       });
 
       print("result is:$result");
