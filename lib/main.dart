@@ -33,7 +33,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        title: Text("Best App"),
+        title: Text("TAVRizer11"),
       ),
       body: columnElements(),
     );
@@ -74,6 +74,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         'The TAVRizer App (TAVR Sizer) is an idea by Mohammed Qintar, MD (Strucutral Interventional Cardiologist at Sparrow Hospital / Michigan State University in Lansing, MI). It aims to help TAVR team members calculate; with ease, the over/under sizing percent of the Edwards Sapien valve in relation to an individual patient’s aortic valve annulus; based on the volume (ml) injected into the Edwards Sapien balloon (nominal, plus or minus). The goal of the valve is to make the calculation easy and quick. This should help the team calculate multiple scenarios quickly to arrive to a desirable sizing percentage. '),
                     Text(
                       '*Twitter handle: *@MohammedQintar',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Email: smarterkidzllc@gmail.com',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,

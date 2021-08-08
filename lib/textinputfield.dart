@@ -24,6 +24,7 @@ class TextInputField extends StatelessWidget {
       child: TextField(
         //  autofocus: true,
         textAlign: TextAlign.start,
+        keyboardType:TextInputType.number,
         obscureText: show_password, // to show password or not
         controller:
             controller_text, // the variable that will contain input user data
