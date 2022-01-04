@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.riyadalali.TAVRizer11">
+    package="com.example.best">
    <application
         android:label="TAVRizer11"
         android:icon="@mipmap/launcher_icon">

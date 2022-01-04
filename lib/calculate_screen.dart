@@ -58,10 +58,14 @@ class _CalculateScreenState extends State<CalculateScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         title: Text("Calculate Page"),
+        backgroundColor: Colors.blue,
       ),
-      body: SingleChildScrollView(child: columnElements()),
+      body: SingleChildScrollView(
+        child: columnElements(),
+      ),
     );
   }
 
@@ -83,7 +87,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                 Flexible(
                   flex: 1,
                   child: Text(
-                    "Valve 20",
+                    "20 mm Edwards",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -103,7 +107,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                 Flexible(
                   flex: 1,
                   child: Text(
-                    "Valve 23",
+                    "23 mm Edwards",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -124,7 +128,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                 Flexible(
                   flex: 1,
                   child: Text(
-                    "Valve 26",
+                    "26 mm Edwards",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -145,7 +149,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                 Flexible(
                   flex: 1,
                   child: Text(
-                    "Valve 29",
+                    "29 mm Edwards",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -175,8 +179,11 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        child: Text("Please Select Value"),
+                        child: Text("Value of Extra/Minus Volume used"),
                       ),
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.1,
                     ),
                     SizedBox(
                       height: MediaQuery.of(context).size.width * 0.1,
@@ -198,26 +205,59 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     Text(dropDownMenuValue),
                   ]),
             ),
+            //-----------------
+
             //----------------------Input Box-------------------------------------
             TextInputField(
               error_msg: "please enter intger number",
-              hint_text: "enter data please ",
+              hint_text: "Patient annulus area (mm\u{00B2}) ",
               controller_text: _dataController,
               show_password: false,
             ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                child: Text("Enter aortic valve annulus area (mm\u{00B2})"),
+              ),
             ),
             Center(
               child: ElevatedButton(
+                //-> to change the color of the button
+                style: ElevatedButton.styleFrom(primary: Colors.blue),
                 child: Text("Calculate"),
                 onPressed: calculateResults,
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+              height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Text('Results is: $number')
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text('Your THV is Over/Under sized by: '),
+            ]),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(color: Colors.red, width: 2)),
+              child: Text(
+                '$number %',
+                style: TextStyle(fontSize: 30.0, color: Colors.red),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('- minus: undersized'),
+                Text('+ plus: oversized'),
+              ],
+            )
           ],
         ),
       ),
