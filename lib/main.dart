@@ -62,7 +62,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ),
                     Text('The TAVRizer App has been developed as a reference, a calculator and a guide only and no representations or guarantees as to the' +
                         'completeness, accuracy or adequacy of any of the information contained in the TAVRizer. The developers do not guarantee the App' +
-                        's compatibility with any policies and procedures of hospitals, healthcare systems or clinics. The  TAVRizer is solely a calculator that guides physicians and does not take into account the circumstances of different patients' +
+                        's compatibility with any policies and procedures of hospitals, healthcare systems or clinics. The TAVRizer is solely a calculator that guides physicians and does not take into account the circumstances of different patients' +
                         'The developers of the TAVRizer App shall not be liable for any claims or losses arising from the use or misuse of the TAVRizer App, its contents, any omissions from its contents, or otherwise. It is solely designed to be a calculator and it’s output is dependent on the user’s input and user’s accuracy of obtaining the raw information. '),
                     Text(
                       'About',
